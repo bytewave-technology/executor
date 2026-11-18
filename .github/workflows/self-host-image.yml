@@ -1,7 +1,7 @@
 # Builds the self-host image from this fork and publishes it to GHCR as
 # ghcr.io/<owner>/executor-selfhost, for linux/arm64 only (the Dokploy server is ARM). Dokploy
-# then pulls the finished image (deploy/dokploy/compose.yaml), so the server never compiles
-# Rust, Go or the dashboard.
+# then pulls the finished image as a Docker application, so the server never compiles Rust, Go
+# or the dashboard.
 #
 # It builds on a native ARM runner: QEMU emulation of the Rust and Go stages is far too slow.
 # To add amd64, build it on ubuntu-24.04, push both by digest and merge them into one manifest.
